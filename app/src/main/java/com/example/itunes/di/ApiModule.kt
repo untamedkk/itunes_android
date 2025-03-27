@@ -12,12 +12,12 @@ import java.util.concurrent.TimeUnit
 
 fun provideHttpClient(): OkHttpClient {
 
-    val interceptor = HttpLoggingInterceptor().apply {
+    val logger = HttpLoggingInterceptor().apply {
         this.level = HttpLoggingInterceptor.Level.BODY
     }
     return OkHttpClient
         .Builder().apply {
-            this.addInterceptor(interceptor)
+            this.addInterceptor(logger)
         }
         .readTimeout(60, TimeUnit.SECONDS)
         .connectTimeout(60, TimeUnit.SECONDS)

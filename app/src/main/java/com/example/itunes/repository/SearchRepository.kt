@@ -8,13 +8,13 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
-class SearchRepository(private val searchApi: ApiService) {
+class SearchRepository(private val apiService: ApiService) {
 
     val tag = SearchRepository::class.simpleName
 
     suspend fun search(searchTerm: String) = flow {
         emit(DataStatus.loading())
-        val result = searchApi.search(searchTerm)
+        val result = apiService.search(searchTerm)
 
         when (result.code()) {
             200 -> emit(DataStatus.success(result.body()?.results))

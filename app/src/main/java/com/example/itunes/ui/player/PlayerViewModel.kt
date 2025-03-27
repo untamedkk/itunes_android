@@ -24,7 +24,6 @@ class PlayerViewModel(
         exoPlayer.addListener(this)
     }
 
-
     fun prepare(currentTrack: MusicTrack, currentTrackIndex: Int) {
         this.currentTrack = currentTrack
         updateState { copy(currentTrack = currentTrack, currentTrackIndex = currentTrackIndex) }
