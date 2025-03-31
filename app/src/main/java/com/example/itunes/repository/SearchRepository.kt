@@ -1,6 +1,6 @@
 package com.example.itunes.repository
 
-import DataStatus
+import com.example.itunes.utils.DataStatus
 import android.util.Log
 import com.example.itunes.data.remote.apis.search.ApiService
 import kotlinx.coroutines.Dispatchers

@@ -1,6 +1,6 @@
 package com.example.itunes.ui.search
 
-import DataStatus
+import com.example.itunes.utils.DataStatus
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity

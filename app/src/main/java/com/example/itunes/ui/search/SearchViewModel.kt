@@ -1,6 +1,6 @@
 package com.example.itunes.ui.search
 
-import DataStatus
+import com.example.itunes.utils.DataStatus
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
